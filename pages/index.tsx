@@ -1,10 +1,10 @@
-import { Htag } from "../components/Htag/Htag";
+import { Heading } from "../components/Heading/Heading";
 
 
 export default function Home(): JSX.Element {
   return (
     <div>
-      <Htag tag='h1'>Текст</Htag>
+      <Heading tag='h1'>Текст</Heading>
     </div>
   );
 }

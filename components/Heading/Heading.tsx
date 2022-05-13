@@ -1,7 +1,7 @@
-import { Htagprops } from "./Htag.props";
-import styles from './Htaf.module.css';
+import { HeadingProps } from "./Heading.props";
+import styles from './Heading.module.css';
 
-export const Htag =({tag, children }: Htagprops)=>{
+export const Heading =({tag, children }: HeadingProps)=>{
   switch(tag) {
     case 'h1':
     return <h1 className={styles.h1}>{children}</h1>;
