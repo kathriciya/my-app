@@ -9,6 +9,7 @@ import { withLayout } from "../layout/Layout";
 // import { Layout } from "../layout/Layout";
 import axios from 'axios';
 import { MenuItem } from "../interfaces/menu.interface";
+import { Input } from "../components/Input/Input";
 
 
 function Home({menu}: HomeProps): JSX.Element {
@@ -27,6 +28,7 @@ function Home({menu}: HomeProps): JSX.Element {
       <Tag size='m' color='grey' >Grey</Tag>
       <Tag size='s' color='primary'>Primary</Tag>
       <Rating rating={rating} isEditable setRating={setRating}/>
+      <Input placeholder="jfdhg"/>
     </>
   );
 }
