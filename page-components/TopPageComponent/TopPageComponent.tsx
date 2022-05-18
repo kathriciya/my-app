@@ -7,7 +7,6 @@ import { Tag } from '../../components/Tag/Tag';
 import { HhData } from '../../components/HhData/HhData';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { Advantages } from '../../components/Advantages/Advantages';
-import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 export const TopPageComponent =({page, products, firstCategory }: TopPageComponentProps): JSX.Element =>{
     return (
@@ -30,7 +29,7 @@ export const TopPageComponent =({page, products, firstCategory }: TopPageCompone
 				<Advantages advantages={page.advantages} />
 			</>
 			}
-      {page.seoText && <Paragraph>{page.seoText}</Paragraph>}
+      {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html: page.seoText}}/>}
       <Heading tag='h2'>Получаемые навыки</Heading>
 			{page.tags.map(t => <Tag key={t} color='primary'>{t}</Tag>)}
       </div>
