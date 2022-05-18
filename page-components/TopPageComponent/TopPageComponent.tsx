@@ -9,17 +9,28 @@ import { TopLevelCategory } from '../../interfaces/page.interface';
 import { Advantages } from '../../components/Advantages/Advantages';
 import { Sort } from '../../components/Sort/Sort';
 import { SortEnum } from '../../components/Sort/Sort.props';
+import { useEffect, useReducer } from 'react';
+import { sortReducer } from './sort.reducer';
 
 export const TopPageComponent =({page, products, firstCategory }: TopPageComponentProps): JSX.Element =>{
+  const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
+
+	const setSort = (sort: SortEnum) => {
+		dispathSort({ type: sort });
+	};
+
+	useEffect(() => {
+		dispathSort({ type: 'reset', initialState: products });
+	}, [products]);
     return (
       <div className={styles.wrapper}>
       <div className={styles.title}>
         <Heading tag='h1'>{page.title}</Heading>
         {products &&<Tag color='grey' size='m'>{products.length}</Tag>}
-        <Sort sort={SortEnum.Rating} setSort={()=>console.log()}/>
+        <Sort sort={sort} setSort={setSort}/>
       </div>
       <div>
-        {products && products.map(p=> (<div key={p._id}>{p.title}</div>))}
+        {sortedProducts && sortedProducts.map(p=> (<div key={p._id}>{p.title}</div>))}
       </div>
       <div className={styles.hhTitle}>
         <Heading tag='h2'>Вакансии - {page.category}</Heading>
