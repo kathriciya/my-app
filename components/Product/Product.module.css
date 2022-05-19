@@ -14,6 +14,10 @@
 	grid-row: 1 / span 2;
 }
 
+.logo img {
+	border-radius: 5px;
+}
+
 .title,
 .tags {
 	grid-column: titlestart / middle;
@@ -44,6 +48,107 @@
 	grid-column: start / middle;
 }
 
+.title {
+	align-self: flex-end;
+
+	font-size: 20px;
+	font-weight: 600;
+
+	line-height: 27px;
+}
+
+.price,
+.credit {
+	align-self: flex-end;
+
+	font-size: 20px;
+
+	line-height: 27px;
+}
+
+.rating {
+	align-self: flex-end;
+}
+
+.priceTitle,
+.creditTitle,
+.rateTitle {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 19px;
+}
+
+.month {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.oldPrice {
+	margin-left: 5px;
+}
+
+.category {
+	margin-top: 7px;
+}
+
+.description {
+	margin-bottom: 15px;
+
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.reviewButton {
+	margin-left: 20px;
+}
+
 .advBlock {
+	font-size: 16px;
+	line-height: 22px;
 	grid-column: middle / end;
+}
+
+.advTitle {
+	margin-bottom: 5px;
+
+	font-weight: bold;
+}
+
+.advantages {
+	margin-bottom: 20px;
+	padding-left: 15px;
+
+	border-left: 2px solid var(--green);
+}
+
+.disadvantages {
+	padding-left: 15px;
+
+	border-left: 2px solid var(--red);
+}
+
+.characteristics {
+	display: grid;
+	align-items: flex-end;
+
+	padding-right: 60px;
+
+	font-size: 16px;
+	line-height: 16px;
+	grid-template-columns: auto 1fr auto;
+	gap: 10px;
+}
+
+.characteristics > span {
+	margin-bottom: 20px;
+}
+
+.characteristicsName {
+	font-weight: bold;
+}
+
+.characteristicsDots {
+	/* margin-bottom: 5px; */
+
+	border-bottom: 1px dotted var(--grey-dark);
 }
