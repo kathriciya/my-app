@@ -10,6 +10,7 @@ import { declOfNum, priceRu } from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
 import { useState } from "react";
 import { Review } from "../Review/Review";
+import { ReviewForm } from "../ReviewForm/ReviewForm";
 
 export const Product = ({
   product,
@@ -112,6 +113,7 @@ export const Product = ({
             <Divider />
           </div>
         ))}
+        <ReviewForm productId={product._id} />
       </Card>
     </div>
   );
