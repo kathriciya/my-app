@@ -1,13 +1,13 @@
-import { ProductProps } from "./Product.props";
-import styles from "./Product.module.css";
-import cn from "classnames";
-import { Card } from "../Card/Card";
-import { Rating } from "../Rating/Rating";
-import { Tag } from "../Tag/Tag";
-import Image from "next/image";
-import { Button } from "../Button/Button";
-import { declOfNum, priceRu } from "../../helpers/helpers";
-import { Divider } from "../Divider/Divider";
+import { ProductProps } from './Product.props';
+import styles from './Product.module.css';
+// import cn from 'classnames';
+import { Card } from '../Card/Card';
+import { Rating } from '../Rating/Rating';
+import { Tag } from '../Tag/Tag';
+import Image from 'next/image';
+import { Button } from '../Button/Button';
+import { declOfNum, priceRu } from '../../helpers/helpers';
+import { Divider } from '../Divider/Divider';
 
 export const Product = ({
   product,
@@ -18,7 +18,11 @@ export const Product = ({
     <Card className={styles.product}>
       <div className={styles.logo}>
         <Image
-          src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+          src={
+            /^https?:\/\//i.test(product.image)
+              ? product.image
+              : process.env.NEXT_PUBLIC_DOMAIN + product.image
+          }
           alt={product.title}
           width={70}
           height={70}
@@ -50,7 +54,7 @@ export const Product = ({
       <div className={styles.creditTitle}>кредит</div>
       <div className={styles.rateTitle}>
         {product.reviewCount}
-        {declOfNum(product.reviewCount, ["отзыв", "отзыва", "отзывов"])}
+        {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
       </div>
       <Divider className={styles.hr} />
       <div className={styles.description}>{product.description}</div>
