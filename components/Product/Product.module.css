@@ -26,6 +26,8 @@
 .price,
 .priceTitle {
 	grid-column: pricestart / priceend;
+
+	white-space: nowrap;
 }
 
 .credit,
@@ -36,12 +38,14 @@
 .rating,
 .rateTitle {
 	grid-column: ratеstart / end;
+
+	white-space: nowrap;
 }
 
 .hr,
 .description,
 .actions {
-	grid-column: start / end;
+	grid-column: start / 11;
 }
 
 .feature {

@@ -55,7 +55,7 @@ export const Product = ({
         <div className={styles.creditTitle}>кредит</div>
         <div className={styles.rateTitle}>
           {product.reviewCount}
-          {declOfNum(product.reviewCount, ["отзыв", "отзыва", "отзывов"])}
+          {declOfNum(product.reviewCount, [" отзыв", " отзыва", " отзывов"])}
         </div>
         <Divider className={styles.hr} />
         <div className={styles.description}>{product.description}</div>
