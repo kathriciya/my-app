@@ -32,10 +32,6 @@
 	line-height: 16px;
 }
 
-.secondLevelBlock {
-	display: none;
-}
-
 .secondBlock {
 	margin-top: 15px;
 	margin-left: 12px;
@@ -44,12 +40,8 @@
 	border-left: 1px solid #DFDFDF;
 }
 
-.secondLevelBlockOpened {
-	display: block;
-}
-
-.secondLevelBlock:last-child {
-	margin-bottom: 20px;
+.secondLevelBlock {
+	overflow: hidden;
 }
 
 .thirdLevel {
