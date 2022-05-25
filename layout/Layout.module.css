@@ -13,8 +13,6 @@
 
 .header {
 	grid-area: header;
-
-	display: none;
 }
 
 .sidebar {
@@ -23,10 +21,16 @@
 
 .body {
 	grid-area: body;
+
+	outline: none;
 }
 
 .footer {
 	grid-area: footer;
+}
+
+.displayed {
+	height: auto;
 }
 
 @media (max-width: 765px) {
@@ -36,14 +40,11 @@
 			"header"
 			"body"
 			"footer";
+		gap: 10px;
 	}
 
 	.sidebar {
 		display: none !important;
-	}
-
-	.header {
-		display: block;
 	}
 
 	.body {
