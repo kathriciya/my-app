@@ -4,4 +4,5 @@ type ReviewFormType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivE
 
 export interface ReviewFormProps extends ReviewFormType {
 	productId: string;
+	isOpened: boolean;
 }
