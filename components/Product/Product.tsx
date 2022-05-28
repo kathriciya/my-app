@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { ProductProps } from "./Product.props";
 import styles from "./Product.module.css";
 import cn from "classnames";
 import { Card } from "../Card/Card";
 import { Rating } from "../Rating/Rating";
 import { Tag } from "../Tag/Tag";
-import Image from "next/image";
 import { Button } from "../Button/Button";
 import { declOfNum, priceRu } from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
@@ -40,7 +40,7 @@ export const Product = motion(
         <div {...props} className={className} ref={ref}>
           <Card className={styles.product}>
             <div className={styles.logo}>
-              <Image
+              <img
                 src={
                   /^https?:\/\//i.test(product.image)
                     ? product.image
