@@ -97,7 +97,6 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({
         page,
         products,
       },
-      revalidate: 75,
     };
   } catch (e) {
     return {
